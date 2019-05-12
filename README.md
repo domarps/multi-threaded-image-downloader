@@ -1,5 +1,13 @@
 # multithreaded-image-downloads
 
+
+If you are looking for a simple solution for multi-threaded downloads, try **aria2c**
+
+```
+sed -E 's/([^,]*),(.*)/\2\n  out=\1.jpg/' ../f8_urls.csv | aria2c -i -
+```
+
+
 Use this package to perform a *multi-threaded* download of a list of file URLs contained in a TSV file with lines formatted as
 `<label>\t<url>\n` (separated by a single tab). Each url is downloaded to a directory with the same name as its label.
 
