@@ -4,7 +4,7 @@
 If you are looking for a simple solution for multi-threaded downloads, try **aria2c**
 
 ```
-sed -E 's/([^,]*),(.*)/\2\n  out=\1.jpg/' ../f8_urls.csv | aria2c -i -
+sed -E 's/([^,]*),(.*)/\2\n  out=\1.jpg/' <path-to-csv> | aria2c -i -
 ```
 
 
