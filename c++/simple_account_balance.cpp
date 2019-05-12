@@ -25,6 +25,7 @@ double accountBalance = 1000;
 //protect shared data from being accessed at the time
 std::mutex acctLock;
 
+
 void GetMoney(int id, double withdrawalAmount)
 {
   std::lock_guard<std::mutex> lock(acctLock);
